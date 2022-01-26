@@ -1,7 +1,12 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
-
-// Стили для файла с примером HTML-фрагмента
-@import './example';
+@import './base/variables';
+@import './blocks/common';
+@import './blocks/container';
+@import './blocks/hero-header';
+@import './blocks/products';
+@import './blocks/about';
+@import './blocks/advantages';
+@import './blocks/gallery';
+@import './blocks/reviews';
+@import './blocks/contacts';
+@import './blocks/footer';
+@import './blocks/modal';
