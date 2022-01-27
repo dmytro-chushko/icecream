@@ -1,0 +1,77 @@
+//================= title section =================//
+.title {
+  font-family: $secondaryFont;
+  font-size: 34px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $main-color;
+  //================= label before title =================//
+  &_subtitle {
+    font-size: 18px;
+    line-height: 1.16;
+    color: $accent-color;
+  }
+  //================= title card product =================//
+  &_product {
+    font-size: 20px;
+    color: $white-color;
+  }
+  //================= title hero =================//
+  &_hero {
+    font-size: 26px;
+    text-align: left;
+    color: $white-color;
+    //================= title span hero =================//
+    &-accent {
+      font-size: 48px;
+      line-height: 0.95;
+      text-align: left;
+    }
+  }
+  //================= title hidden =================//
+  &_hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 48px;
+    &_subtitle {
+      font-size: 26px;
+      line-height: 1.15;
+    }
+    &_hero {
+      font-size: 22px;
+      line-height: 1.14;
+      &-accent {
+        font-size: 34px;
+        line-height: 0.91;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 48px;
+    &_subtitle {
+      font-size: 26px;
+      line-height: 1.15;
+    }
+    &_hero {
+      font-size: 22px;
+      line-height: 1.14;
+      &-accent {
+        font-size: 34px;
+        line-height: 0.91;
+      }
+    }
+  }
+}
