@@ -1,14 +1,15 @@
 .customer-review {
   margin: 0;
   padding: 0;
-}
-
-.customer-review__item {
   padding-left: 50px;
   padding-right: 50px;
   @media screen and (min-width: 768px) {
     padding-left: 74px;
     padding-right: 74px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-left: 115px;
+    padding-right: 115px;
   }
 }
 
@@ -19,12 +20,18 @@
   @media screen and (min-width: 768px) {
     margin-bottom: 49px;
   }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 62px;
+  }
 }
 
 .customer-review__text {
   position: relative;
   margin: 0;
   margin-bottom: 56px;
+
+  padding-left: 7px;
+  padding-right: 16px;
 
   font-weight: 500;
   font-size: 12px;
@@ -43,7 +50,7 @@
     content: '';
     position: absolute;
     z-index: -1;
-    left: 4px;
+    left: 11px;
     top: -15px;
     display: block;
     width: 54px;
@@ -59,6 +66,9 @@
     line-height: 2.14;
     letter-spacing: 0.04em;
 
+    padding-left: 28px;
+    padding-right: 35px;
+
     background-image: repeating-linear-gradient(
       to bottom,
       transparent,
@@ -67,7 +77,23 @@
     );
 
     &::before {
-      left: -30px;
+      left: 0px;
+      top: -17px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .customer-review__text {
+    font-size: 16px;
+    line-height: 1.875;
+
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    color: #000000;
+    &::before {
+      left: -5px;
       top: -17px;
     }
   }
@@ -110,7 +136,15 @@
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .customer-review__dots {
+    margin-bottom: 15px;
+  }
+}
+
 .customer-review__descr {
+  margin: 0;
+  margin-bottom: 30px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.86;
@@ -124,4 +158,29 @@
     font-size: 16px;
     line-height: 1.875;
   }
+}
+
+@media screen and (min-width: 1200px) {
+  .customer-review__descr {
+    font-size: 20px;
+    line-height: 1.85;
+  }
+}
+
+.slider-btn {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-btn__item:not(:last-child) {
+  margin-right: 18px;
+}
+
+.slider-btn__item {
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: $slider-btn-color;
 }
