@@ -1,0 +1,127 @@
+.customer-review {
+  margin: 0;
+  padding: 0;
+}
+
+.customer-review__item {
+  padding-left: 50px;
+  padding-right: 50px;
+  @media screen and (min-width: 768px) {
+    padding-left: 74px;
+    padding-right: 74px;
+  }
+}
+
+.customer-review__img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 72px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 49px;
+  }
+}
+
+.customer-review__text {
+  position: relative;
+  margin: 0;
+  margin-bottom: 56px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2.58;
+  text-align: center;
+  color: $text-color;
+
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 30px,
+    $text-underline-color 31px
+  );
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 4px;
+    top: -15px;
+    display: block;
+    width: 54px;
+    height: 40px;
+    background-image: url(../icons/quotes.svg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .customer-review__text {
+    margin-bottom: 52px;
+    font-size: 14px;
+    line-height: 2.14;
+    letter-spacing: 0.04em;
+
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 29px,
+      $text-underline-color 30px
+    );
+
+    &::before {
+      left: -30px;
+      top: -17px;
+    }
+  }
+}
+
+.customer-review__dots {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 18px;
+  width: 4px;
+  height: 4px;
+  background-color: #c7133e;
+  border-radius: 2px;
+  &::after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    display: block;
+    width: 4px;
+    height: 4px;
+    background-color: #c7133e;
+    border-radius: 2px;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    display: block;
+    width: 4px;
+    height: 4px;
+    background-color: #c7133e;
+    border-radius: 2px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .customer-review__dots {
+    margin-bottom: 14px;
+  }
+}
+
+.customer-review__descr {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.86;
+  text-align: center;
+
+  color: $text-color;
+}
+
+@media screen and (min-width: 768px) {
+  .customer-review__descr {
+    font-size: 16px;
+    line-height: 1.875;
+  }
+}
