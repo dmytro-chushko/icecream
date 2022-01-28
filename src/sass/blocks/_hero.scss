@@ -1,0 +1,88 @@
+// HERO
+
+.section-hero {
+  background-color: $card-pink;
+  width: 100%;
+  & h1 {
+    margin: 0;
+  }
+}
+
+.container-hero {
+  background-image: url(../img/hero-ice-480.png), url(../img/hero-ellipse-1200.png);
+  background-repeat: no-repeat;
+  background-size: 171px, 346px;
+  background-position: bottom 0 right 32px, right -62px bottom 75px;
+}
+
+.hero-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-title-box {
+  @media screen and (max-width: 767px) {
+    width: 218px;
+    height: 106px;
+    margin-bottom: 19px;
+    margin-top: 137px;
+  }
+}
+
+.hero-title {
+  font-family: $secondaryFont;
+  font-size: 26px;
+  line-height: 1.15;
+  text-align: left;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $white-color;
+
+  &__accent {
+    font-size: 48px;
+    line-height: 0.95;
+    text-align: left;
+    color: $main-color;
+  }
+}
+
+// HERO BUTONS якорные ссылки
+
+.hero-buttons-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 160px;
+}
+
+.hero-buttons-list__link {
+  @media screen and (min-width: 1200px) {
+    padding: 15px 21px;
+  }
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  padding: 9px 14px;
+
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 10px;
+
+  color: $white-color;
+  background: $main-color;
+
+  border-radius: 20px;
+}
+
+.hero-buttons-list__link--second {
+  color: $main-color;
+  background: $white-color;
+}
+
+.hero-buttons-list__item {
+  &:first-child {
+    margin-right: 8px;
+  }
+}
