@@ -1,31 +1,8 @@
 .outlets {
   background-color: #fff5f6;
 
-  .content-container {
-    position: relative;
-    width: 320px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: auto;
-    margin-right: auto;
-
-    padding-top: 1291px;
-    padding-bottom: 113px;
-
-    @media screen and (min-width: 768px) {
-      width: 768px;
-      padding-left: 34px;
-      padding-right: 34px;
-      padding-top: 547px;
-      padding-bottom: 165px;
-    }
-
+  .container {
     @media screen and (min-width: 1200px) {
-      width: 1200px;
-      padding-left: 115px;
-      padding-right: 115px;
-      padding-top: 556px;
-      padding-bottom: 165px;
       background-image: url(../images/desktop/outlets-bg.png);
       background-size: contain;
       background-repeat: no-repeat;
@@ -40,25 +17,29 @@
 }
 
 .outlets-list {
-  position: absolute;
+  margin: 0;
   padding: 0;
-  left: 50px;
-  right: 50px;
-  top: -84px;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
   @media screen and (min-width: 768px) {
     display: flex;
+    align-items: center;
     justify-content: center;
-    top: -78px;
+    margin: 0px -10px;
   }
 
   @media screen and (min-width: 1200px) {
-    justify-content: center;
-    top: -102px;
+    margin: 0px -15px;
   }
 }
 
-.outlets-item {
+.outlets-list__item {
   max-width: 220px;
   height: auto;
   margin: 0;
@@ -66,286 +47,237 @@
   background: $white-color;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
-  &:not(:last-child) {
-    margin-bottom: 20px;
+
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
+
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: block;
-    margin: 0;
     margin-bottom: 0;
-    max-width: 220px;
-    min-height: 544px;
+    width: calc((100% - 6 * 10px) / 3);
+    margin: 0px 10px;
     padding: 50px 31px;
   }
 
-  @media screen and (min-width: 768px) {
-    &:not(:last-child) {
-      margin-right: 20px;
-      margin-bottom: 0;
-    }
-  }
-
   @media screen and (min-width: 1200px) {
+    width: calc((100% - 6 * 15px) / 3);
     max-width: 330px;
-    height: auto;
     padding: 51px 44px 62px 43px;
-    margin-bottom: 0;
+    margin: 0px 15px;
   }
 
-  @media screen and (min-width: 1200px) {
-    &:not(:last-child) {
-      margin-right: 31px;
+  .subtitle {
+    width: 80px;
+    margin-bottom: 25px;
+    font-family: $mainFont;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.875;
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    color: $text-color;
+    background: $card-coffee;
+    border-radius: 4px;
+
+    @media screen and (min-width: 768px) {
+      width: 73px;
+      margin-bottom: 30px;
+      font-size: 16px;
+      border-radius: 6px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 32px;
+      font-size: 16px;
+      line-height: 1.9;
     }
   }
-}
 
-.subtitle {
-  width: 80px;
-  margin-bottom: 25px;
-  font-family: $mainFont;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.875;
-  text-align: center;
-  letter-spacing: 0.04em;
-
-  color: $text-color;
-  background: $card-coffee;
-  border-radius: 4px;
-
-  @media screen and (min-width: 768px) {
-    width: 73px;
-    margin-bottom: 30px;
-    font-size: 16px;
-    border-radius: 6px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 32px;
-    font-size: 16px;
-    line-height: 1.9;
-  }
-}
-
-.subtitle-food {
-  width: 130px;
-  margin-bottom: 25px;
-  font-family: $mainFont;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.86;
-  text-align: center;
-  letter-spacing: 0.04em;
-
-  color: $white-color;
-  background: $card-green;
-  border-radius: 4px;
-
-  @media screen and (min-width: 768px) {
-    width: 138px;
-    margin-bottom: 30px;
-    font-size: 16px;
-    border-radius: 6px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 32px;
-  }
-}
-.outlets-title {
-  margin-bottom: 10px;
-  font-family: $mainFont;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.83;
-  letter-spacing: 0.04em;
-
-  color: $text-color;
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 14px;
-    font-size: 14px;
+  .subtitle-food {
+    width: 130px;
+    margin-bottom: 25px;
+    font-family: $mainFont;
+    font-weight: 500;
+    font-size: 12px;
     line-height: 1.86;
-  }
+    text-align: center;
+    letter-spacing: 0.04em;
 
-  @media screen and (min-width: 1200px) {
+    color: $white-color;
+    background: $card-green;
+    border-radius: 4px;
+
+    @media screen and (min-width: 768px) {
+      width: 138px;
+      margin-bottom: 30px;
+      font-size: 16px;
+      border-radius: 6px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 32px;
+    }
+  }
+  .outlets-title {
     margin-bottom: 10px;
-    font-size: 16px;
-    line-height: 1.9;
+    font-family: $mainFont;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.83;
+    letter-spacing: 0.04em;
+
+    color: $text-color;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 14px;
+      font-size: 14px;
+      line-height: 1.86;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 10px;
+      font-size: 16px;
+      line-height: 1.9;
+    }
   }
-}
-.outlets-text {
-  padding-bottom: 25px;
-  margin-bottom: 25px;
-  font-family: $mainFont;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.5;
-  color: $secondary-text-color;
+  .outlets-text {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    font-family: $mainFont;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    color: $secondary-text-color;
 
-  border-bottom: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
 
-  @media screen and (min-width: 768px) {
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-    font-size: 14px;
-    line-height: 1.66;
+    @media screen and (min-width: 768px) {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      font-size: 14px;
+      line-height: 1.66;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+      font-size: 16px;
+      line-height: 1.8;
+    }
   }
+  .timetable-title {
+    font-family: $mainFont;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.83;
 
-  @media screen and (min-width: 1200px) {
-    padding-bottom: 32px;
-    margin-bottom: 32px;
-    font-size: 16px;
-    line-height: 1.8;
+    color: $text-color;
+
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.86;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 16px;
+      line-height: 1.9;
+    }
   }
-}
-.timetable-title {
-  font-family: $mainFont;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.83;
+  .timetable-list {
+    padding: 0;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e1e1e1;
 
-  color: $text-color;
+    @media screen and (min-width: 768px) {
+      padding-bottom: 30px;
+    }
 
-  @media screen and (min-width: 768px) {
-    font-size: 14px;
-    line-height: 1.86;
+    @media screen and (min-width: 1200px) {
+      padding-bottom: 32;
+    }
   }
+  .timetable-desc {
+    font-family: $mainFont;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.83;
 
-  @media screen and (min-width: 1200px) {
-    font-size: 16px;
-    line-height: 1.9;
-  }
-}
-.timetable-list {
-  padding: 0;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #e1e1e1;
+    color: $accent-color;
 
-  @media screen and (min-width: 768px) {
-    padding-bottom: 30px;
-  }
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.86;
+    }
 
-  @media screen and (min-width: 1200px) {
-    padding-bottom: 32;
+    @media screen and (min-width: 1200px) {
+      font-size: 16px;
+      line-height: 1.9;
+    }
   }
-}
-.timetable-desc {
-  font-family: $mainFont;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.83;
+  .outlets-contacts {
+    padding: 0;
+    margin-top: 25px;
 
-  color: $accent-color;
+    @media screen and (min-width: 768px) {
+      margin-top: 30px;
+    }
 
-  @media screen and (min-width: 768px) {
-    font-size: 14px;
-    line-height: 1.86;
+    @media screen and (min-width: 1200px) {
+      margin-top: 32px;
+    }
   }
+  .outlets-contacts__item {
+    font-family: $mainFont;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    color: $secondary-text-color;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: $main-color;
+    }
 
-  @media screen and (min-width: 1200px) {
-    font-size: 16px;
-    line-height: 1.9;
-  }
-}
-.outlets-contacts {
-  padding: 0;
-  margin-top: 25px;
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+      line-height: 1.86;
+    }
 
-  @media screen and (min-width: 768px) {
-    margin-top: 30px;
+    @media screen and (min-width: 1200px) {
+      font-size: 16px;
+      line-height: 1.8;
+    }
   }
-
-  @media screen and (min-width: 1200px) {
-    margin-top: 32px;
-  }
-}
-.contacts-item {
-  font-family: $mainFont;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.5;
-  color: $secondary-text-color;
-  text-decoration: none;
-  &:hover,
-  &:focus {
-    color: $main-color;
-  }
-
-  @media screen and (min-width: 768px) {
-    font-size: 14px;
-    line-height: 1.86;
-  }
-
-  @media screen and (min-width: 1200px) {
-    font-size: 16px;
-    line-height: 1.8;
-  }
-}
-.outlets-time-item:first-child {
-  margin-bottom: 10px;
-  @media screen and(min-width:768px) {
-    margin-bottom: 15px;
+  .outlets-time__item:first-child {
+    margin-bottom: 10px;
+    @media screen and(min-width:768px) {
+      margin-bottom: 15px;
+    }
   }
 }
 .outlets-nav {
   display: flex;
-  justify-content: center;
-
   &:not(:last-child) {
     margin-right: 15px;
   }
   @media screen and (max-width: 767px) {
     flex-direction: column;
     align-items: center;
-    margin-top: 174px;
+    margin-top: 54px;
   }
 
   @media screen and (min-width: 768px) {
+    justify-content: center;
     margin-top: 81px;
   }
 
   @media screen and (min-width: 1200px) {
+    justify-content: center;
     margin-top: 86px;
-  }
-}
-.outlets-nav .btn {
-  padding: 0;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  display: block;
-
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.3125;
-
-  color: $main-color;
-  background-color: $white-color;
-  border: 0;
-  border-radius: 22px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.outlets-red {
-  margin-bottom: 10px;
-  max-width: 161px;
-  width: 100%;
-  @media screen and (min-width: 768px) {
-    margin: 0 15px 0 0;
-    max-width: 191px;
-    width: 100%;
-  }
-}
-.outlets-white {
-  cursor: pointer;
-  width: 100%;
-  max-width: 161px;
-  @media screen and (min-width: 768px) {
-    max-width: 174px;
-    width: 100%;
-  }
-  &:hover,
-  &:focus {
-    background-color: #ecebeb;
   }
 }
 
@@ -353,25 +285,55 @@ button {
   outline: transparent;
 }
 
-.btn.outlets-red {
+.outlets-nav__button {
+  display: block;
+  padding: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
   cursor: pointer;
-  background-color: $main-color;
   color: $white-color;
+  background-color: $main-color;
+
+  border: 0;
+  border-radius: 22px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 10px;
+  width: 161px;
+  height: 44px;
 
   &:hover,
   &:focus {
     background-color: #c7133e;
   }
+
+  @media screen and (min-width: 768px) {
+    width: 191px;
+    height: 44px;
+    margin: 0 15px 0 0;
+  }
 }
-.outlets-btn-icon {
-  margin-left: 8px;
-  width: 7px;
-  height: 10px;
-  stroke: $main-color;
+.outlets-nav__button.secondary {
+  cursor: pointer;
+  color: $main-color;
+  background-color: $white-color;
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
 }
-.outlets-btn-icon-white {
+
+.outlets-nav__icon {
   margin-left: 8px;
   width: 7px;
   height: 10px;
   stroke: $white-color;
+}
+.outlets-nav__icon-f {
+  margin-left: 8px;
+  width: 7px;
+  height: 10px;
+  stroke: $main-color;
 }
