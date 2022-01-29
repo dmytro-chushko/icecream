@@ -104,9 +104,6 @@
   }
 
   &__description {
-    padding-left: 30px;
-    padding-right: 30px;
-
     @media screen and (min-width: 768px) {
       display: flex;
       padding: 50px 0 0 0;
@@ -114,9 +111,12 @@
   }
 
   &__aside {
+    padding-left: 30px;
+    padding-right: 30px;
     @media screen and (min-width: 768px) {
       display: flex;
       flex-direction: column;
+      padding: 0;
     }
   }
 }
@@ -136,10 +136,9 @@
 
 .button {
   position: relative;
-  padding: 0;
-
-  max-width: 176px;
+  width: 176px;
   height: 44px;
+
   border-radius: 22px;
   background-color: $white-color;
   border: none;
@@ -164,7 +163,7 @@
 }
 
 .arrow-icon {
-  margin-left: 9px;
+  margin-left: 18px;
 }
 
 .title_about {
