@@ -1,0 +1,17 @@
+.advantages {
+  &__item-inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__accent {
+    margin-bottom: 13px;
+
+    font-family: 'Titan One', cursive;
+    font-size: 36px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #D41443;
+  }
+}
