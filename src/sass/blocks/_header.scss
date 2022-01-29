@@ -1,0 +1,167 @@
+// HEADER
+
+.page-header {
+  padding-top: 6px;
+  background-color: $card-pink;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 37px;
+    &__box {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.logotype {
+  width: 199px;
+  height: 50px;
+}
+
+.logo-menu-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    flex-grow: 1;
+    margin-right: 30px;
+  }
+}
+
+// MOBILE MENU
+
+.menu {
+  @media screen and (max-width: 1279px) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    transform: translateX(101%);
+    transition: transform 500ms;
+
+    &__box {
+      width: 250px;
+      height: 100vh;
+      background-color: #e17992;
+      position: relative;
+      padding-top: 60px;
+    }
+    &.is-open {
+      transform: translateX(-0);
+    }
+  }
+}
+
+.site-nav {
+  padding: 0;
+
+  &__link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.28;
+    color: $white-color;
+  }
+
+  &__link.current {
+    color: $main-color;
+  }
+
+  @media screen and (max-width: 1279px) {
+    &__item {
+      border-bottom: solid #e18298 1px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+    }
+    &__item:first-child {
+      border-top: solid #e18298 1px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    &__item:not(:last-child) {
+      margin-right: 35px;
+    }
+
+    &__link {
+      font-size: 16px;
+      line-height: 1.31;
+    }
+  }
+}
+
+// КНОПКИ МЕНЮ
+
+.button-menu {
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.button-cross {
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 23px;
+  right: 28px;
+}
+
+// BUTTON'S BUY NOW
+
+.btn-buy-now {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+
+  background: #ffffff;
+  border-radius: 22px;
+  border: none;
+  color: $main-color;
+
+  cursor: pointer;
+  transition: 250ms;
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+
+  &__menu {
+    margin-left: 20px;
+    padding: 12px 55px;
+  }
+  &__main {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+    padding: 0 38px;
+    height: 44px;
+  }
+  &__icon {
+    height: 10px;
+    width: 8px;
+    margin-left: 16px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    &__menu {
+      display: none;
+    }
+  }
+}
