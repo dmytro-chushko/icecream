@@ -3,14 +3,14 @@
 
   .container {
     @media screen and (min-width: 1200px) {
-      background-image: url(../images/desktop/outlets-bg.png);
+      background-image: url(../images/products/desktop/outlets-bg.png);
       background-size: contain;
       background-repeat: no-repeat;
 
       @media screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
-        background-image: url(../images/desktop/outlets-bg@2x.png);
+        background-image: url(../images/products/desktop/outlets-bg@2x.png);
       }
     }
   }

@@ -22,6 +22,17 @@
     padding: 0px 44px;
     font-size: 16px;
   }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 26px;
+    height: 6px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    background-image: url(../images/products/3points.svg);
+  }
 }
 
 .products-cardset {
@@ -50,16 +61,144 @@
     }
   }
 
-  &:nth-child(n + 1) {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -113px;
+    
+    display: block;
+    width: 249px;
+    height: 252px;
+
+    @media screen and (max-width: 767px) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media screen and (min-width: 768px) {
+      top: -104px;
+
+      width: 220px;
+      height: 226px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      top: -210px;
+      
+      width: 330px;
+      height: 335px;
+    }
+  }
+
+  &:nth-child(1) {
     background-color: $card-pink;
+
+    &::before {
+      background-image: url(../images/products/mobile/product1.png);
+
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url(../images/products/mobile/product1@2x.png);
+        background-size: contain;
+      }
+
+      @media screen and (min-width: 768px) {
+        background-image: url(../images/products/tablet/product1.png);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: url(../images/products/tablet/product1@2x.png);
+          background-size: contain;
+        }
+      }
+
+      @media screen and (min-width: 1280px) {
+        background-image: url(../images/products/desktop/product1.png);
+        
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: url(../images/products/desktop/product1@2x.png);
+          background-size: contain;
+        }
+      }
+    }
   }
 
-  &:nth-child(n + 2) {
+  &:nth-child(2) {
     background-color: $card-coffee;
+
+    &::before {
+      background-image: url(../images/products/mobile/product2.png);
+
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url(../images/products/mobile/product2@2x.png);
+        background-size: contain;
+      }
+
+      @media screen and (min-width: 768px) {
+        background-image: url(../images/products/tablet/product2.png);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: url(../images/products/tablet/product2@2x.png);
+          background-size: contain;
+        }
+      }
+
+      @media screen and (min-width: 1280px) {
+        background-image: url(../images/products/desktop/product2.png);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: url(../images/products/desktop/product2@2x.png);
+          background-size: contain;
+        }
+      }
+    }
   }
 
-  &:nth-child(n + 3) {
+  &:nth-child(3) {
     background-color: $card-green;
+
+    &::before {
+      background-image: url(../images/products/mobile/product3.png);
+
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url(../images/products/mobile/product3@2x.png);
+        background-size: contain;
+      }
+
+      @media screen and (min-width: 768px) {
+        background-image: url(../images/products/tablet/product3.png);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: url(../images/products/tablet/product3@2x.png);
+          background-size: contain;
+        }
+      }
+
+      @media screen and (min-width: 1280px) {
+        background-image: url(../images/products/desktop/product3.png);
+
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: url(../images/products/desktop/product3@2x.png);
+          background-size: contain;
+        }
+      }
+    }
   }
 
   @media screen and (min-width: 768px) {
@@ -72,24 +211,6 @@
     width: calc((100% - 6 * 15px) / 3);
     margin: 0px 15px;
     padding-top: 163px;
-  }
-}
-
-.products-cardset__img {
-  position: absolute;
-  left: 50%;
-  top: -113px;
-  transform: translateX(-50%);
-  width: 249px;
-
-  @media screen and(min-width: 768px) {
-    width: 220px;
-    top: -104px;
-  }
-
-  @media screen and(min-width: 1280px) {
-    width: 337px;
-    top: -210px;
   }
 }
 
