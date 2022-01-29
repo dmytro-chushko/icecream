@@ -12,13 +12,13 @@
 
   background-color: $main-bg-color;
 
-  background: url(../img/about/sectionbg-phone.png);
+  background: url(../images/about/sectionbg-phone.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 0 85%;
 
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background: url(../img/about/sectionbg-phone@2x.png);
+    background: url(../images/about/sectionbg-phone@2x.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 0 85%;
@@ -29,13 +29,13 @@
   }
 
   @media screen and (min-width: 1200px) {
-    background: url(../img/about/sectionbg-desk.png);
+    background: url(../images/about/sectionbg-desk.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 0 342px;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background: url(../img/about/sectionbg-desk@2x.png);
+      background: url(../images/about/sectionbg-desk@2x.png);
       background-repeat: no-repeat;
       background-size: contain;
       background-position: 0 342px;
