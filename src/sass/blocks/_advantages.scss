@@ -1,0 +1,128 @@
+.advantages {
+  padding-bottom: 97px;
+
+  &__list {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      margin: -30px;
+    }
+    
+    @media screen and (min-width: 1280px) {
+      margin: -15px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  &__item {
+    width: calc((100% - 180px)/3);
+    margin: 30px;
+
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 38px;
+      }
+    }
+    
+    @media screen and (min-width: 1280px) {
+      width: calc((100% - 90px)/3);
+      margin: 15px;
+    }
+
+    &::before {
+      content: "";
+      height: 50px;
+      display: block;
+      margin-bottom: 16px;
+      background-size: contain;
+
+      @media screen and (min-width: 768px) {
+        margin-bottom: 36px;
+      }
+
+      @media screen and (min-width: 1280px) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &:nth-child(1)::before {
+      width: 33px;
+      background-image: url(../images/advantages/icon1x1.png);
+
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url(../images/advantages/icon1x2.png);
+      }
+    }
+
+    &:nth-child(2)::before {
+      width: 50px;
+      background-image: url(../images/advantages/icon2x1.png);
+
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url(../images/advantages/icon2x2.png);
+      }
+    }
+
+    &:nth-child(3)::before {
+      width: 44px;
+      background-image: url(../images/advantages/icon3x1.png);
+
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url(../images/advantages/icon3x2.png);
+      }
+    }
+  }
+
+  &__item-inner {
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.70;
+
+    @media screen and (min-width: 768px) {
+      width: 180px;
+      font-size: 14px;
+      line-height: 1.74;
+    }
+
+    @media screen and (min-width: 1280px) {
+      width: 330px;
+      font-size: 16px;
+      line-height: 1.76;
+    }
+  }
+
+  &__accent {
+    margin-bottom: 13px;
+
+    font-family: 'Titan One', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    color: $main-color;
+
+    @media screen and (max-width: 767px) {
+      text-transform: uppercase;
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 48px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 15px;
+
+      font-size: 58px;
+    }
+  }
+}
