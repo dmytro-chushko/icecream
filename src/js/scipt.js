@@ -1,29 +1,35 @@
 window.addEventListener('DOMContentLoaded', function () {
 
-    let offset = 0;
-    let slideIndex = 1;
+    let slideIndex = 1,
+    paused = false;
 
     const slides = document.querySelectorAll('.customer-review__item'),
-        slider = document.querySelector('.reviews__wrapper'),
-        slidesWrapper = document.querySelector('.customer-review'),
-        width = window.getComputedStyle(slidesWrapper).width,
-        slidesField = document.querySelector('.customer-review__inner');
-        
+        slider = document.querySelector('.reviews__wrapper');
+         
+    function showSlides(n) {
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
 
-    slidesField.style.width = 100 * slides.length + '%';
-    slidesField.style.display = 'flex';
-    slidesField.style.transition = '0.5s all';
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
 
-    slidesWrapper.style.overflow = 'hidden';
-
-        slides.forEach(slide => {
-        slide.style.width = width;
+        slides.forEach(item => {
+            item.style.display = "none";
+            item.classList.add("animate__animated");
         });
-    
-    
+
+        slides[slideIndex - 1].style.display = 'block';
+    }
+    showSlides(slideIndex);
+
+
+
+
     const indicators = document.createElement('ol'),
-        dots = [];
-        indicators.classList.add('slider-btn');
+    dots = [];
+    indicators.classList.add('slider-btn');
     slider.append(indicators);
 
     for (let i = 0; i < slides.length; i++) {
@@ -37,18 +43,45 @@ window.addEventListener('DOMContentLoaded', function () {
     dots.push(dot);
     }
 
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+        dots.forEach(dot => dot.style.opacity = ".5");
+        dots[slideIndex - 1].style.opacity = 1;
+    }
+
 
     dots.forEach(dot => {
-        dot.addEventListener('click', (e) => {
-            const slideTo = e.target.getAttribute('data-slide-to');
+    dot.addEventListener('click', (e) => {
+        const slideTo = e.target.getAttribute('data-slide-to');
 
-            slideIndex = slideTo;
-            offset = +width.slice(0, width.length - 2) * (slideTo - 1);
-
-            slidesField.style.transform = `translateX(-${offset}px)`;
-
-            dots.forEach(dot => dot.style.opacity = ".5");
-            dots[slideIndex-1].style.opacity = 1;
+        slideIndex = slideTo;
+        slides.forEach(item => {
+            item.style.display = "none";
         });
+
+        slides[slideIndex - 1].style.display = 'block';
+        slides[slideIndex - 1].classList.add('animate__pulse');
+
+        dots.forEach(dot => dot.style.opacity = ".5");
+        dots[slideIndex-1].style.opacity = 1;
+    });
+    });
+
+    function activateAnimation() {
+    paused = setInterval(function() {
+        plusSlides(1); 
+        slides[slideIndex - 1].classList.add('animate__pulse');
+    }, 4000);
+        
+    }
+    activateAnimation();
+
+
+    slides[0].parentNode.addEventListener('mouseenter', () => {
+    clearInterval(paused);
+    });
+    slides[0].parentNode.addEventListener('mouseleave', () => {
+        activateAnimation();
     });
 });
+
