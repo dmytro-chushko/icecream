@@ -1,7 +1,5 @@
 .gallery-items {
   position: relative;
-  margin: 0;
-  padding: 0;
   display: grid;
   grid-template: repeat(6, 141px) / repeat(2, 140px);
   gap: 2px;

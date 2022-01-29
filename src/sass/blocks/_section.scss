@@ -37,3 +37,26 @@
     padding-bottom: 119px;
   }
 }
+
+.outlets {
+  padding-bottom: 83px;
+  background: linear-gradient(to bottom, $white-color 84px, $main-bg-color 84px);
+  @media screen and (min-width: 768px) {
+    background: linear-gradient(to bottom, $white-color 78px, $main-bg-color 78px);
+    padding-bottom: 158px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 165px;
+    background-image: url(../images/bg/outlets-bg.png),
+      linear-gradient(to bottom, $white-color 102px, $main-bg-color 102px);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/bg/outlets-bg@2x.png),
+        linear-gradient(to bottom, $white-color 102px, $main-bg-color 102px);
+    }
+  }
+}
