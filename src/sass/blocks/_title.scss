@@ -56,12 +56,18 @@
         line-height: 0.91;
       }
     }
+    &_product {
+      font-size: 26px;
+      line-height: 1.15;
+    }
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .title {
-    font-size: 48px;
+    font-size: 58px;
+    line-height: 1.138;
+    letter-spacing: 0.06em;
     &_subtitle {
       font-size: 26px;
       line-height: 1.15;
@@ -73,6 +79,10 @@
         font-size: 34px;
         line-height: 0.91;
       }
+    }
+    &_product {
+      font-size: 34px;
+      line-height: 1.133;
     }
   }
 }
