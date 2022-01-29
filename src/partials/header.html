@@ -14,7 +14,7 @@
         </svg>
       </button>
     </div>
-    <!-- МЕНЮ -->
+    <!-- НАВИГАЦИЯ -->
     <div class="menu" data-menu>
       <div class="menu__box">
         <button type="button" class="button-cross" aria-expanded="false" data-menu-button>
@@ -25,9 +25,12 @@
             ></use>
           </svg>
         </button>
-        <div class="button-buy-now-box">
-          <button type="button" class="button-buy-now">Buy now</button>
-        </div>
+        <button class="btn-buy-now btn-buy-now__menu">
+          Buy now
+          <svg class="btn-buy-now__icon">
+            <use href="./icons/hero-header-sprite.svg#icon-bracket"></use>
+          </svg>
+        </button>
         <nav>
           <ul class="site-nav">
             <li class="site-nav__item"><a href="" class="site-nav__link current">Home</a></li>
@@ -39,5 +42,11 @@
         </nav>
       </div>
     </div>
+    <button class="btn-buy-now btn-buy-now__main">
+      Buy now
+      <svg class="btn-buy-now__icon">
+        <use href="./icons/hero-header-sprite.svg#icon-bracket"></use>
+      </svg>
+    </button>
   </div>
 </header>

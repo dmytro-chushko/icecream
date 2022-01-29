@@ -3,36 +3,73 @@
 .section-hero {
   background-color: $card-pink;
   width: 100%;
-  & h1 {
+  h1 {
     margin: 0;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+  }
+
+  padding-top: 137px;
+  padding-bottom: 160px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 15px;
+    padding-bottom: 59px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 84px;
+    padding-bottom: 102px;
   }
 }
 
-.container-hero {
-  background-image: url(../img/hero-ice-480.png), url(../img/hero-ellipse-1200.png);
-  background-repeat: no-repeat;
-  background-size: 171px, 346px;
-  background-position: bottom 0 right 32px, right -62px bottom 75px;
-}
+// .container-hero {
+//   background-image: url(../img/hero-ice-480.png), url(../img/hero-ellipse-1200.png);
+//   background-repeat: no-repeat;
+//   background-size: 171px, 346px;
+//   background-position: bottom 0 right 32px, right -62px bottom 75px;
+// }
 
 .hero-box {
   display: flex;
   flex-direction: column;
+
+  &__container {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
 
 .hero-title-box {
-  @media screen and (max-width: 767px) {
-    width: 218px;
-    height: 106px;
-    margin-bottom: 19px;
-    margin-top: 137px;
+  width: 218px;
+  height: 106px;
+  margin-bottom: 19px;
+
+  @media screen and (min-width: 768px) {
+    width: 162px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 277px;
+    height: 137px;
+    margin-left: 69px;
   }
 }
 
 .hero-title {
   font-family: $secondaryFont;
   font-size: 26px;
-  line-height: 1.15;
+  line-height: 1.03;
   text-align: left;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -44,45 +81,188 @@
     text-align: left;
     color: $main-color;
   }
+
+  @media screen and (min-width: 768px) {
+    font-size: 22px;
+    line-height: 1.18;
+
+    &__accent {
+      font-size: 34px;
+      line-height: 0.91;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 38px;
+    line-height: 1.15;
+
+    &__accent {
+      font-size: 58px;
+      line-height: 0.91;
+    }
+  }
 }
 
-// HERO BUTONS якорные ссылки
+.available-box {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (max-width: 1279px) {
+    margin-right: 10px;
+  }
+
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.available-list {
+  margin: 0;
+
+  &__number {
+    font-family: $secondaryFont;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+
+    letter-spacing: 0.04em;
+
+    color: #d41443;
+  }
+
+  &__text {
+    font-family: $mainFont;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 10px;
+
+    color: #ffffff;
+  }
+
+  &__item:nth-last-child(3) {
+    margin-bottom: 14px;
+  }
+
+  @media screen and (min-width: 1279px) {
+    &__number {
+      font-size: 46px;
+      line-height: 1.15;
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 1.28;
+    }
+    &__item:nth-last-child(3) {
+      margin-bottom: 18px;
+    }
+  }
+}
+
+// HERO BUTONS
 
 .hero-buttons-list {
   display: flex;
   margin: 0;
   padding: 0;
-  margin-bottom: 160px;
-}
 
-.hero-buttons-list__link {
-  @media screen and (min-width: 1200px) {
-    padding: 15px 21px;
+  &__link {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    padding: 9px 14px;
+
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 10px;
+
+    color: $white-color;
+    background: $main-color;
+
+    border-radius: 20px;
+
+    transition: 250ms;
   }
 
-  display: flex;
-  align-items: center;
-  text-align: center;
+  &__link--second {
+    color: $main-color;
+    background: $white-color;
+  }
 
-  padding: 9px 14px;
+  &__item {
+    &:first-child {
+      margin-right: 8px;
+    }
+  }
 
-  font-weight: 400;
-  font-size: 8px;
-  line-height: 10px;
+  @media screen and (min-width: 1280px) {
+    margin-left: 69px;
 
-  color: $white-color;
-  background: $main-color;
-
-  border-radius: 20px;
+    &__link:hover,
+    &__link:focus {
+      background-color: #c7133e;
+    }
+    &__item {
+      &:first-child {
+        margin-right: 15px;
+      }
+    }
+    &__link {
+      padding: 15px 21px;
+      font-size: 14px;
+      line-height: 18px;
+      height: 40px;
+    }
+    &__link--second:hover,
+    &__link--second:focus {
+      background-color: #ecebeb;
+    }
+  }
 }
 
-.hero-buttons-list__link--second {
-  color: $main-color;
-  background: $white-color;
-}
+// HERO PARAGRAPH
 
-.hero-buttons-list__item {
-  &:first-child {
-    margin-right: 8px;
+.hero-text-box {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  margin-left: 118px;
+  margin-top: 66px;
+  width: 114px;
+  height: 48px;
+
+  &__text {
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.5;
+    color: $white-color;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__button {
+    margin-top: 7px;
+  }
+  &__button--icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 200px;
+    height: 78px;
+    margin-left: 249px;
+    margin-top: 112px;
+    &__text {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    &__button {
+      margin-top: 20px;
+    }
+    &__button--icon {
+      width: 26px;
+      height: 26px;
+    }
   }
 }
