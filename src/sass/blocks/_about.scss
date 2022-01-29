@@ -12,13 +12,13 @@
 
   background-color: $main-bg-color;
 
-  background: url(../img/about/sectionbg-phone.png);
+  background: url(../images/about/sectionbg-phone.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 0 85%;
 
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background: url(../img/about/sectionbg-phone@2x.png);
+    background: url(../images/about/sectionbg-phone@2x.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 0 85%;
@@ -29,13 +29,13 @@
   }
 
   @media screen and (min-width: 1200px) {
-    background: url(../img/about/sectionbg-desk.png);
+    background: url(../images/about/sectionbg-desk.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 0 342px;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background: url(../img/about/sectionbg-desk@2x.png);
+      background: url(../images/about/sectionbg-desk@2x.png);
       background-repeat: no-repeat;
       background-size: contain;
       background-position: 0 342px;
@@ -104,9 +104,6 @@
   }
 
   &__description {
-    padding-left: 30px;
-    padding-right: 30px;
-
     @media screen and (min-width: 768px) {
       display: flex;
       padding: 50px 0 0 0;
@@ -114,9 +111,12 @@
   }
 
   &__aside {
+    padding-left: 30px;
+    padding-right: 30px;
     @media screen and (min-width: 768px) {
       display: flex;
       flex-direction: column;
+      padding: 0;
     }
   }
 }
@@ -136,10 +136,9 @@
 
 .button {
   position: relative;
-  padding: 0;
-
-  max-width: 176px;
+  width: 176px;
   height: 44px;
+
   border-radius: 22px;
   background-color: $white-color;
   border: none;
@@ -164,7 +163,7 @@
 }
 
 .arrow-icon {
-  margin-left: 9px;
+  margin-left: 18px;
 }
 
 .title_about {
