@@ -5,6 +5,7 @@
   display: grid;
   grid-template: repeat(6, 141px) / repeat(2, 140px);
   gap: 2px;
+  justify-content: center;
 }
 
 @media screen and (min-width: 480px) {
@@ -22,7 +23,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .gallery-items {
     grid-template: repeat(2, 215px) / repeat(7, 141px);
     grid-auto-rows: 215px;
@@ -96,7 +97,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .gallery-items__item {
     &_first {
       margin-top: 142px;
@@ -155,7 +156,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .gallery-items__img {
     width: 141px;
     height: 141px;
