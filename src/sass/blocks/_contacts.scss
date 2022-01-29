@@ -1,25 +1,4 @@
-.outlets {
-  background-color: #fff5f6;
-
-  .container {
-    @media screen and (min-width: 1200px) {
-      background-image: url(../images/desktop/outlets-bg.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-
-      @media screen and (min-device-pixel-ratio: 2),
-        screen and (min-resolution: 192dpi),
-        screen and (min-resolution: 2dppx) {
-        background-image: url(../images/desktop/outlets-bg@2x.png);
-      }
-    }
-  }
-}
-
 .outlets-list {
-  margin: 0;
-  padding: 0;
-
   @media screen and (max-width: 767px) {
     display: flex;
     justify-content: center;
@@ -41,7 +20,6 @@
 
 .outlets-list__item {
   max-width: 220px;
-  height: auto;
   margin: 0;
   padding: 43px 20px;
   background: $white-color;
@@ -69,7 +47,7 @@
     margin: 0px 15px;
   }
 
-  .subtitle {
+  .outlets-list__subtitle {
     width: 80px;
     margin-bottom: 25px;
     font-family: $mainFont;
@@ -97,32 +75,14 @@
     }
   }
 
-  .subtitle-food {
+  .outlets-list__subtitle_foodtruck {
     width: 130px;
-    margin-bottom: 25px;
-    font-family: $mainFont;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.86;
-    text-align: center;
-    letter-spacing: 0.04em;
 
     color: $white-color;
     background: $card-green;
-    border-radius: 4px;
-
-    @media screen and (min-width: 768px) {
-      width: 138px;
-      margin-bottom: 30px;
-      font-size: 16px;
-      border-radius: 6px;
-    }
-
-    @media screen and (min-width: 1200px) {
-      margin-bottom: 32px;
-    }
   }
-  .outlets-title {
+
+  .outlets-list__city {
     margin-bottom: 10px;
     font-family: $mainFont;
     font-weight: 500;
@@ -144,10 +104,8 @@
       line-height: 1.9;
     }
   }
-  .outlets-text {
+  .outlets-list__text {
     padding-bottom: 25px;
-    margin-bottom: 25px;
-    font-family: $mainFont;
     font-weight: 500;
     font-size: 12px;
     line-height: 1.5;
@@ -169,7 +127,7 @@
       line-height: 1.8;
     }
   }
-  .timetable-title {
+  .timetable-list__title {
     font-family: $mainFont;
     font-weight: 500;
     font-size: 12px;
@@ -188,7 +146,7 @@
     }
   }
   .timetable-list {
-    padding: 0;
+    margin-top: 25px;
     padding-bottom: 25px;
     border-bottom: 1px solid #e1e1e1;
 
@@ -200,7 +158,7 @@
       padding-bottom: 32;
     }
   }
-  .timetable-desc {
+  .timetable-list__descr {
     font-family: $mainFont;
     font-weight: 500;
     font-size: 12px;
@@ -219,7 +177,6 @@
     }
   }
   .outlets-contacts {
-    padding: 0;
     margin-top: 25px;
 
     @media screen and (min-width: 768px) {
@@ -252,7 +209,7 @@
       line-height: 1.8;
     }
   }
-  .outlets-time__item:first-child {
+  .timetable-list__item:first-child {
     margin-bottom: 10px;
     @media screen and(min-width:768px) {
       margin-bottom: 15px;
