@@ -3,17 +3,6 @@
 .section-hero {
   background-color: $card-pink;
   width: 100%;
-  h1 {
-    margin: 0;
-  }
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  p {
-    padding: 0;
-    margin: 0;
-  }
 
   padding-top: 137px;
   padding-bottom: 160px;
@@ -27,19 +16,15 @@
     padding-top: 84px;
     padding-bottom: 102px;
   }
-}
 
-// .container-hero {
-//   background-image: url(../img/hero-ice-480.png), url(../img/hero-ellipse-1200.png);
-//   background-repeat: no-repeat;
-//   background-size: 171px, 346px;
-//   background-position: bottom 0 right 32px, right -62px bottom 75px;
-// }
+  &__container {
+    position: relative;
+  }
+}
 
 .hero-box {
   display: flex;
   flex-direction: column;
-
   &__container {
     @media screen and (min-width: 768px) {
       display: flex;
@@ -47,6 +32,52 @@
     }
   }
 }
+
+.hero-icecream-picture {
+  position: absolute;
+  @media screen and (max-width: 767px) {
+    right: 30px;
+    bottom: -160px;
+  }
+  @media screen and (min-width: 768px) {
+    right: 247px;
+    bottom: -59px;
+  }
+  @media screen and (min-width: 1280px) {
+    right: 420px;
+    bottom: -102px;
+  }
+}
+
+.hero-tasty-picture {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  position: absolute;
+  bottom: -59px;
+  right: 36px;
+
+  @media screen and (min-width: 1280px) {
+    bottom: -102px;
+    right: 109px;
+  }
+}
+
+.hero-milk-picture {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  position: absolute;
+  bottom: -31px;
+  left: 36px;
+
+  @media screen and (min-width: 1280px) {
+    bottom: -57px;
+    left: 146px;
+  }
+}
+
+// HERO TITLE
 
 .hero-title-box {
   width: 218px;
@@ -102,6 +133,8 @@
   }
 }
 
+// BLOCK 16 CAFES 23 TRUCKS
+
 .available-box {
   @media screen and (max-width: 767px) {
     display: none;
@@ -116,16 +149,12 @@
 }
 
 .available-list {
-  margin: 0;
-
   &__number {
     font-family: $secondaryFont;
     font-weight: 400;
     font-size: 28px;
     line-height: 32px;
-
     letter-spacing: 0.04em;
-
     color: #d41443;
   }
 
@@ -134,7 +163,6 @@
     font-weight: 400;
     font-size: 8px;
     line-height: 10px;
-
     color: #ffffff;
   }
 
@@ -161,16 +189,13 @@
 
 .hero-buttons-list {
   display: flex;
-  margin: 0;
-  padding: 0;
-
   &__link {
     display: flex;
     align-items: center;
     text-align: center;
 
     padding: 9px 14px;
-
+    font-family: inherit;
     font-weight: 400;
     font-size: 8px;
     line-height: 10px;
@@ -179,13 +204,20 @@
     background: $main-color;
 
     border-radius: 20px;
-
-    transition: 250ms;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &__link--second {
     color: $main-color;
     background: $white-color;
+  }
+  &__link:hover,
+  &__link:focus {
+    background-color: #c7133e;
+  }
+  &__link--second:hover,
+  &__link--second:focus {
+    background-color: #ecebeb;
   }
 
   &__item {
@@ -197,10 +229,6 @@
   @media screen and (min-width: 1280px) {
     margin-left: 69px;
 
-    &__link:hover,
-    &__link:focus {
-      background-color: #c7133e;
-    }
     &__item {
       &:first-child {
         margin-right: 15px;
@@ -212,14 +240,10 @@
       line-height: 18px;
       height: 40px;
     }
-    &__link--second:hover,
-    &__link--second:focus {
-      background-color: #ecebeb;
-    }
   }
 }
 
-// HERO PARAGRAPH
+// BLOCK HERO TEXT
 
 .hero-text-box {
   @media screen and (max-width: 767px) {
