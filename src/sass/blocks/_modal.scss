@@ -1,0 +1,116 @@
+.about-backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(240, 209, 165, 0.2);
+  top: 0;
+  left: 0;
+  opacity: 1;
+
+  transition: opacity 0.3s ease-in;
+
+  &_is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.about-modal {
+  position: absolute;
+  padding: 40px 40px;
+  max-width: 450px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 10px;
+  background-color: $white-color;
+
+  opacity: 1;
+  transition: opacity 250ms ease-in;
+
+  .about-backdrop_is-hidden & {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  &__close {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 9px;
+    right: 9px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.leftright {
+  height: 4px;
+  width: 35px;
+  position: absolute;
+
+  background-color: $secondary-text-color;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  transition: transform 250ms ease-in;
+}
+
+.rightleft {
+  height: 4px;
+  width: 35px;
+  position: absolute;
+
+  background-color: $secondary-text-color;
+  border-radius: 2px;
+  transform: rotate(-45deg);
+  transition: transform 250ms ease-in;
+}
+
+.about-modal__close:hover .leftright,
+.about-modal__close:focus .leftright {
+  transform: rotate(-45deg);
+  background-color: $accent-color;
+}
+
+.about-modal__close:hover .rightleft,
+.about-modal__close:focus .rightleft {
+  transform: rotate(45deg);
+  background-color: $accent-color;
+}
+
+.about__text_modal {
+  text-indent: 20px;
+  color: $secondary-text-color;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.recipe {
+  &__title {
+    font-size: 20px;
+    color: $accent-color;
+    letter-spacing: 0.04em;
+    line-height: 1.7;
+    font-weight: 500;
+  }
+
+  &__item {
+    color: $secondary-text-color;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  &__directions {
+    font-size: 16px;
+    color: $secondary-text-color;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+}
