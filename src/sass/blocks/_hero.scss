@@ -23,6 +23,8 @@
 }
 
 .hero-box {
+  position: relative;
+  z-index: 9;
   display: flex;
   flex-direction: column;
   &__container {
