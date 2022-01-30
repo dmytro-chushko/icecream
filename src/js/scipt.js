@@ -71,7 +71,7 @@ window.addEventListener('DOMContentLoaded', function () {
     paused = setInterval(function() {
         plusSlides(1); 
         slides[slideIndex - 1].classList.add('animate__pulse');
-    }, 4000);
+    }, 8000);
         
     }
     activateAnimation();
