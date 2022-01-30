@@ -273,14 +273,19 @@
 }
 
 .footer-title {
-  width: 270px;
+  @media screen and (max-width: 767px) {
+    width: 164px;
+    height: 523px;
+  }
 
   @media screen and (min-width: 768px) {
     width: 500px;
     height: 183px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (max-width: 1279px) {
+    width: 164px;
+    height: 523px;
   }
 
   &__text {
@@ -302,10 +307,6 @@
 
     @media screen and (min-width: 1200px) {
       font-size: 30px;
-      padding-right: 422px;
-
-      display: flex;
-      align-items: center;
     }
   }
   &__subtitle {
