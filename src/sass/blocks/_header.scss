@@ -101,7 +101,7 @@
       border-top: solid #e18298 1px;
     }
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
     &__item {
       padding-left: 24px;
     }
@@ -113,6 +113,9 @@
     &__link {
       font-size: 16px;
       line-height: 1.31;
+    }
+    &__item:not(:first-child) {
+      padding-left: 35px;
     }
   }
 }
@@ -137,8 +140,7 @@
     display: none;
   }
 
-  padding-bottom: 10px;
-  padding-left: 10px;
+  padding: 0 0 5px 5px;
   display: inline-flex;
   position: absolute;
   top: 23px;
