@@ -91,7 +91,7 @@ window.addEventListener('DOMContentLoaded', function () {
     const upElem = document.querySelector('.pageup');
 
     window.addEventListener('scroll', () => {
-        if (document.documentElement.clientWidth > 768 && document.documentElement.scrollTop > 1650) {
+        if (document.documentElement.clientWidth > 1200 && document.documentElement.scrollTop > 1650) {
             upElem.classList.add('animate__animated', 'animate__fadeIn');
             upElem.classList.remove('animate__fadeOut');
         } else {
