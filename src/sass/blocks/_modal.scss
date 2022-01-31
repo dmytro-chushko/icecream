@@ -98,14 +98,14 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
-    background-color: transparent;
-    border: none;
   }
 }
 
 .leftright {
   height: 4px;
   width: 30px;
+  margin-top: 15px;
+  margin-left: 6px;
   position: absolute;
 
   background-color: $secondary-text-color;
@@ -117,6 +117,8 @@
 .rightleft {
   height: 4px;
   width: 30px;
+  margin-top: 15px;
+  margin-left: 6px;
   position: absolute;
 
   background-color: $secondary-text-color;
