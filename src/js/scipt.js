@@ -1,5 +1,7 @@
 window.addEventListener('DOMContentLoaded', function () {
 
+    // slider
+
     let slideIndex = 1,
     paused = false;
 
@@ -71,7 +73,7 @@ window.addEventListener('DOMContentLoaded', function () {
     paused = setInterval(function() {
         plusSlides(1); 
         slides[slideIndex - 1].classList.add('animate__pulse');
-    }, 4000);
+    }, 8000);
         
     }
     activateAnimation();
@@ -84,7 +86,80 @@ window.addEventListener('DOMContentLoaded', function () {
         activateAnimation();
     });
 
-  // ============= Open hidden text ==============
+    // scrolling
+
+    const upElem = document.querySelector('.pageup');
+
+    window.addEventListener('scroll', () => {
+        if (document.documentElement.clientWidth > 768 && document.documentElement.scrollTop > 1650) {
+            upElem.classList.add('animate__animated', 'animate__fadeIn');
+            upElem.classList.remove('animate__fadeOut');
+        } else {
+            upElem.classList.add('animate__fadeOut');
+            upElem.classList.remove('animate__fadeIn');
+        }
+    });
+
+
+    let links = document.querySelectorAll('[href^="#"]'),
+        speed = 0.3;
+    
+    links.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            let widthTop = document.documentElement.scrollTop,
+                hash = this.hash,
+                toBlock = document.querySelector(hash).getBoundingClientRect().top,
+                start = null;
+
+            requestAnimationFrame(step);
+
+            function step(time) {
+                if (start === null) {
+                    start = time;
+                }
+
+                let progress = time - start,
+                    r = (toBlock < 0 ? Math.max(widthTop - progress/speed, widthTop + toBlock) : Math.min(widthTop + progress/speed, widthTop + toBlock));
+
+                    document.documentElement.scrollTo(0, r);
+
+                if (r != widthTop + toBlock) {
+                    requestAnimationFrame(step);
+                } else {
+                    location.hash = hash;
+                }
+            }
+        });
+    });
+    // menu 
+
+    const hamburger = document.querySelector(".button-menu"),
+        menu = document.querySelector('.menu'),
+        closeElem = document.querySelector('.button-cross'),
+        menuLink = document.querySelectorAll('.site-nav__item');
+
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    closeElem.addEventListener('click', () => {
+        menu.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+
+    menuLink.forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.remove('active');
+        document.body.style.overflow = '';
+        });
+    });
+
+    // ============= Open hidden text ==============
 
   const btnsProdactCard = document.querySelectorAll("[data-text-open]");
   
@@ -93,6 +168,8 @@ window.addEventListener('DOMContentLoaded', function () {
     btn.parentNode.parentNode.classList.toggle("products-cardset__card_getting-taller");
     btn.classList.toggle("products-btn_rotate");
   }));
-
+  
 });
+
+
 

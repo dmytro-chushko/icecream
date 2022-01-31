@@ -1,0 +1,27 @@
+.pageup {
+  opacity: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 7px;
+  position: fixed;
+  bottom: 100px;
+  right: 5%;
+  z-index: 30;
+  background-color: $accent-color;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pageup:hover,
+.pageup:focus {
+  background-color: $main-color;
+}
+
+.pageup-arrow {
+  fill: $white-color;
+  width: 16px;
+  height: 16px;
+  transform: rotate(-90deg);
+}

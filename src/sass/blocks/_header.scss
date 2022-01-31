@@ -1,21 +1,22 @@
 // HEADER
 
 .page-header {
-  padding-top: 6px;
   background-color: $card-pink;
+  padding-top: 6px;
+
+  &__box {
+    z-index: 15;
+    position: relative;
+  }
 
   @media screen and (min-width: 768px) {
     padding-top: 37px;
     &__box {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
   }
-}
-
-.logotype {
-  width: 199px;
-  height: 50px;
 }
 
 .logo-menu-box {
@@ -29,25 +30,36 @@
   }
 }
 
-// MOBILE MENU
+// NAVIGATION
 
 .menu {
   @media screen and (max-width: 1279px) {
     position: fixed;
     top: 0;
-    right: 0;
+    left: -100%;
     z-index: 99;
     width: 100%;
-    height: 100%;
-    transform: translateX(101%);
-    transition: transform 500ms;
+    height: 100vh;
+    visibility: hidden;
+    opacity: 0;
+    transition: left 600ms cubic-bezier(0.4, 0, 0.2, 1), opacity 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    &.active {
+      left: 0;
+      visibility: visible;
+      opacity: 1;
+    }
 
     &__box {
-      width: 250px;
-      height: 100vh;
-      background-color: #e17992;
       position: relative;
+      width: 250px;
+      height: 100%;
       padding-top: 60px;
+      background-color: #e17992;
+
+      @media screen and (min-width: 768px) {
+        width: 254px;
+      }
     }
     &.is-open {
       transform: translateX(-0);
@@ -56,15 +68,24 @@
 }
 
 .site-nav {
-  padding: 0;
-
   &__link {
+    width: 100%;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.28;
     color: $white-color;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding-top: 13px;
+    padding-bottom: 13px;
   }
-
+  &__link:hover,
+  &__link:focus {
+    color: #ecebeb;
+  }
+  &__link.current:focus,
+  &__link.current:hover {
+    color: #c7133e;
+  }
   &__link.current {
     color: $main-color;
   }
@@ -72,20 +93,22 @@
   @media screen and (max-width: 1279px) {
     &__item {
       border-bottom: solid #e18298 1px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      padding-left: 20px;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      padding-left: 21px;
     }
     &__item:first-child {
       border-top: solid #e18298 1px;
     }
   }
+  @media screen and (min-width: 768px) {
+    &__item {
+      padding-left: 24px;
+    }
+  }
 
   @media screen and (min-width: 1280px) {
     display: flex;
-    &__item:not(:last-child) {
-      margin-right: 35px;
-    }
 
     &__link {
       font-size: 16px;
@@ -94,7 +117,7 @@
   }
 }
 
-// КНОПКИ МЕНЮ
+// КНОПКИ ВЫЗОВА И ЗАКРЫТИЯ MOBILE MENU
 
 .button-menu {
   @media screen and (min-width: 1280px) {
@@ -106,19 +129,24 @@
   padding: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .button-cross {
   @media screen and (min-width: 1280px) {
     display: none;
   }
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
+
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: inline-flex;
   position: absolute;
   top: 23px;
   right: 28px;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 // BUTTON'S BUY NOW
@@ -135,7 +163,6 @@
   color: $main-color;
 
   cursor: pointer;
-  transition: 250ms;
 
   &:hover,
   &:focus {
@@ -143,25 +170,44 @@
   }
 
   &__menu {
-    margin-left: 20px;
-    padding: 12px 55px;
+    margin-bottom: 19px;
+    padding: 12px 48px 12px 62px;
+    @media screen and (min-width: 768px) {
+      padding: 12px 44px 12px 51px;
+    }
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+
   &__main {
     @media screen and (max-width: 767px) {
       display: none;
     }
-    padding: 0 38px;
-    height: 44px;
-  }
-  &__icon {
-    height: 10px;
-    width: 8px;
-    margin-left: 16px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 12px 37px 12px 40px;
   }
 
-  @media screen and (min-width: 1280px) {
-    &__menu {
-      display: none;
+  &__icon--menu {
+    height: 10px;
+    width: 8px;
+    margin-left: 28px;
+    padding-top: 2px;
+    @media screen and (min-width: 768px) {
+      margin-left: 21px;
     }
+  }
+  &__icon--main {
+    height: 10px;
+    width: 7px;
+    margin-left: 13px;
+    padding-top: 2px;
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+
+  @media screen and (min-width: 1280px) {
+    display: none;
   }
 }

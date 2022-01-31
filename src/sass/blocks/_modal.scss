@@ -1,0 +1,146 @@
+.about-backdrop {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  padding: 92px 15px;
+
+  @media screen and (min-width: 768px) {
+    padding: 208px 159px;
+  }
+
+  background-color: rgba(144, 126, 130, 0.5);
+
+  opacity: 1;
+
+  transition: opacity 250ms ease-in;
+
+  &_is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.about-modal {
+  position: relative;
+  padding: 40px;
+  max-width: 450px;
+  min-height: 500px;
+
+  top: 50%;
+  left: 50%;
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    max-width: 528px;
+  }
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 10px;
+  background-color: $white-color;
+
+  transition: transform 250ms ease-in;
+
+  .about-backdrop_is-hidden & {
+    transform: translate(-50%, -50%);
+  }
+
+  &__title {
+    font-family: $secondaryFont;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $accent-color;
+    margin: 20px 0 20px 0;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: left;
+    letter-spacing: 0.04em;
+
+    color: $secondary-text-color;
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 16px;
+    }
+  }
+
+  &__item {
+    &:first-child {
+      margin-bottom: 40px;
+      @media screen and (min-width: 1280px) {
+        margin-bottom: 35px;
+      }
+    }
+    &:nth-child(2) {
+      margin-bottom: 10px;
+
+      @media screen and (min-width: 1280px) {
+        margin-bottom: 35px;
+      }
+    }
+  }
+  &__close {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 9px;
+    right: 9px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.leftright {
+  height: 4px;
+  width: 30px;
+  position: absolute;
+
+  background-color: $secondary-text-color;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  transition: transform 250ms ease-in;
+}
+
+.rightleft {
+  height: 4px;
+  width: 30px;
+  position: absolute;
+
+  background-color: $secondary-text-color;
+  border-radius: 2px;
+  transform: rotate(-45deg);
+  transition: transform 250ms ease-in;
+}
+
+.about-modal__close:hover .leftright,
+.about-modal__close:focus .leftright {
+  transform: rotate(-45deg);
+  background-color: $accent-color;
+}
+
+.about-modal__close:hover .rightleft,
+.about-modal__close:focus .rightleft {
+  transform: rotate(45deg);
+  background-color: $accent-color;
+}
+
+.about__text_modal {
+  text-indent: 20px;
+  color: $secondary-text-color;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
