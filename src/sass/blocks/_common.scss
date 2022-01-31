@@ -2,6 +2,9 @@ body {
   font-family: $mainFont;
   color: $text-color;
   background-color: $main-bg-color;
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 
 img {
