@@ -83,5 +83,16 @@ window.addEventListener('DOMContentLoaded', function () {
     slides[0].parentNode.addEventListener('mouseleave', () => {
         activateAnimation();
     });
+
+  // ============= Open hidden text ==============
+
+  const btnsProdactCard = document.querySelectorAll("[data-text-open]");
+  
+  btnsProdactCard.forEach(btn => btn.addEventListener('click', () => {
+    btn.parentElement.classList.toggle("products-cardset__hidden-block_open");
+    btn.parentNode.parentNode.classList.toggle("products-cardset__card_getting-taller");
+    btn.classList.toggle("products-btn_rotate");
+  }));
+
 });
 
