@@ -7,6 +7,10 @@
   padding-top: 137px;
   padding-bottom: 160px;
 
+  @media screen and (max-width: 767px) {
+    overflow-x: hidden;
+  }
+
   @media screen and (min-width: 768px) {
     padding-top: 15px;
     padding-bottom: 59px;
@@ -23,8 +27,8 @@
 }
 
 .hero-box {
+  z-index: 10;
   position: relative;
-  z-index: 9;
   display: flex;
   flex-direction: column;
   &__container {
@@ -35,7 +39,37 @@
   }
 }
 
+.hero-ellipse {
+  z-index: 5;
+
+  border-radius: 50%;
+  background-color: #ffa5ba;
+  position: absolute;
+
+  @media screen and (max-width: 767px) {
+    width: 346px;
+    height: 346px;
+    right: -62px;
+    top: -110px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 324px;
+    height: 322px;
+
+    bottom: -13px;
+    left: 307px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 538px;
+    height: 538px;
+    bottom: -27px;
+    left: 544px;
+  }
+}
+
 .hero-icecream-picture {
+  z-index: 7;
   position: absolute;
   @media screen and (max-width: 767px) {
     right: 30px;
@@ -52,6 +86,7 @@
 }
 
 .hero-tasty-picture {
+  z-index: 7;
   @media screen and (max-width: 767px) {
     display: none;
   }
@@ -153,16 +188,15 @@
 .available-list {
   &__number {
     font-family: $secondaryFont;
-    font-weight: 400;
     font-size: 28px;
     line-height: 32px;
     letter-spacing: 0.04em;
     color: #d41443;
+    position: relative;
   }
 
   &__text {
     font-family: $mainFont;
-    font-weight: 400;
     font-size: 8px;
     line-height: 10px;
     color: #ffffff;
@@ -185,6 +219,28 @@
       margin-bottom: 18px;
     }
   }
+
+  @media screen and (min-width: 768px) {
+    &__number::after {
+      content: '';
+      width: 16px;
+      height: 16px;
+      background-color: $white-color;
+      border-radius: 50%;
+      position: absolute;
+      right: -8px;
+      top: -2px;
+      z-index: -1;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    &__number::after {
+      width: 30px;
+      height: 30px;
+      right: -16px;
+      top: -4px;
+    }
+  }
 }
 
 // HERO BUTONS
@@ -198,7 +254,6 @@
 
     padding: 9px 14px;
     font-family: inherit;
-    font-weight: 400;
     font-size: 8px;
     line-height: 10px;
 
@@ -258,7 +313,6 @@
   height: 48px;
 
   &__text {
-    font-weight: 400;
     font-size: 8px;
     line-height: 1.5;
     color: $white-color;
