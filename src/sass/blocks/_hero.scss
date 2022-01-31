@@ -346,3 +346,10 @@
     }
   }
 }
+
+.animate__animated.animate__rotateIn {
+  --animate-duration: 2s;
+}
+.animate__animated.animate__zoomIn {
+  --animate-duration: 2s;
+}
