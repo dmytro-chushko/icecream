@@ -27,6 +27,8 @@
   padding-bottom: 98px;
   text-align: center;
 
+  background-color: $white-color;
+
   @media screen and (min-width: 768px) {
     padding-top: 122px;
     padding-bottom: 112px;
@@ -50,7 +52,7 @@
     background-image: url(../images/bg/outlets-bg.png),
       linear-gradient(to bottom, $white-color 102px, $main-bg-color 102px);
     background-position: 0 90px, 0 0;
-    background-size: contain;
+    background-size: 100%;
     background-repeat: no-repeat;
 
     @media screen and (min-device-pixel-ratio: 2),
