@@ -159,7 +159,7 @@ window.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // ============= Open hidden text ==============
+    // ============= It open hidden text in products parcial ==============
 
   const btnsProdactCard = document.querySelectorAll("[data-text-open]");
   
