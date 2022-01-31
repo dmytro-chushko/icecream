@@ -311,7 +311,8 @@
   fill: currentColor;
 }
 
-.products-btn:hover {
+.products-btn:hover,
+.products-btn:focus {
   background-color: $main-color;
   color: $white-color;
 }
