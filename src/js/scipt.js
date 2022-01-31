@@ -86,8 +86,6 @@ window.addEventListener('DOMContentLoaded', function () {
         activateAnimation();
     });
 
-
-
     // scrolling
 
     const upElem = document.querySelector('.pageup');
@@ -160,5 +158,18 @@ window.addEventListener('DOMContentLoaded', function () {
         document.body.style.overflow = '';
         });
     });
+
+    // ============= It open hidden text in products parcial ==============
+
+  const btnsProdactCard = document.querySelectorAll("[data-text-open]");
+  
+  btnsProdactCard.forEach(btn => btn.addEventListener('click', () => {
+    btn.parentElement.classList.toggle("products-cardset__hidden-block_open");
+    btn.parentNode.parentNode.classList.toggle("products-cardset__card_getting-taller");
+    btn.classList.toggle("products-btn_rotate");
+  }));
+  
 });
+
+
 
