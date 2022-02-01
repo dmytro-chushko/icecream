@@ -46,12 +46,10 @@
     padding: 0;
     margin: 0 0 20px 0;
     @media screen and (min-width: 768px) {
-      padding-bottom: 62px;
       padding-top: 50px;
-      margin: 0;
+      margin: 0 0 62px 0;
     }
     @media screen and (min-width: 1280px) {
-      padding-bottom: 45px;
       padding-top: 56px;
     }
   }
