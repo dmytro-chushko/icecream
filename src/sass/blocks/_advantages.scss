@@ -116,7 +116,7 @@
 
   &__accent {
     margin-bottom: 13px;
-
+    
     font-family: 'Titan One', sans-serif;
     font-weight: 400;
     font-size: 36px;
@@ -124,6 +124,7 @@
     letter-spacing: 0.04em;
     color: $main-color;
 
+    cursor: default;
     transform-origin: left;
     transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
