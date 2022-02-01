@@ -58,13 +58,13 @@
     height: 322px;
 
     bottom: -13px;
-    left: 307px;
+    left: 300px;
   }
   @media screen and (min-width: 1280px) {
     width: 538px;
     height: 538px;
-    bottom: -27px;
-    left: 544px;
+    bottom: -30px;
+    left: 510px;
   }
 }
 
@@ -345,4 +345,11 @@
       height: 26px;
     }
   }
+}
+
+.animate__animated.animate__rotateIn {
+  --animate-duration: 2s;
+}
+.animate__animated.animate__zoomIn {
+  --animate-duration: 2s;
 }
