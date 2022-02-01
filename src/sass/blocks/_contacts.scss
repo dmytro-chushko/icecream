@@ -13,7 +13,7 @@
     margin: 0px -10px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     margin: 0px -15px;
   }
 }
@@ -32,7 +32,7 @@
     }
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
     display: block;
     margin-bottom: 0;
     width: calc((100% - 6 * 10px) / 3);
@@ -40,7 +40,7 @@
     padding: 50px 31px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1279px) {
     width: calc((100% - 6 * 15px) / 3);
     max-width: 330px;
     padding: 51px 44px 62px 43px;
@@ -68,7 +68,7 @@
       border-radius: 6px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       margin-bottom: 32px;
       font-size: 16px;
       line-height: 1.9;
@@ -98,7 +98,7 @@
       line-height: 1.86;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       margin-bottom: 10px;
       font-size: 16px;
       line-height: 1.9;
@@ -120,7 +120,7 @@
       line-height: 1.66;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       padding-bottom: 32px;
       margin-bottom: 32px;
       font-size: 16px;
@@ -140,7 +140,7 @@
       line-height: 1.86;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       font-size: 16px;
       line-height: 1.9;
     }
@@ -154,7 +154,7 @@
       padding-bottom: 30px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       padding-bottom: 32;
     }
   }
@@ -171,7 +171,7 @@
       line-height: 1.86;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       font-size: 16px;
       line-height: 1.9;
     }
@@ -183,7 +183,7 @@
       margin-top: 30px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       margin-top: 32px;
     }
   }
@@ -204,7 +204,7 @@
       line-height: 1.86;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
       font-size: 16px;
       line-height: 1.8;
     }
@@ -232,7 +232,7 @@
     margin-top: 81px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     justify-content: center;
     margin-top: 86px;
   }
