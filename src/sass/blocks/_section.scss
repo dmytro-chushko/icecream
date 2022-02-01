@@ -23,18 +23,17 @@
 }
 
 .products {
-  padding-top: 121px;
-  padding-bottom: 98px;
+  padding-top: 80px;
+  padding-bottom: 90px;
   text-align: center;
 
   background-color: $white-color;
 
   @media screen and (min-width: 768px) {
-    padding-top: 122px;
-    padding-bottom: 112px;
+    padding-bottom: 80px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1280px) {
     padding-top: 127px;
     padding-bottom: 119px;
   }
