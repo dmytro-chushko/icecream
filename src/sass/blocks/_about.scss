@@ -31,13 +31,13 @@
   @media screen and (min-width: 1280px) {
     background: url(../images/about/sectionbg-desk.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: right bottom;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background: url(../images/about/sectionbg-desk@2x.png);
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: cover;
       background-position: right bottom;
     }
   }
