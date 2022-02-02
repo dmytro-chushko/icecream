@@ -1,8 +1,5 @@
-.modal-buy-now-data {
-  overflow: hidden;
-}
-
 .backdrop-buy-now {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -11,12 +8,6 @@
   width: 100%;
   height: 100%;
   background-color: rgba(144, 126, 130, 0.5);
-
-  &--hidden {
-    opacity: 0;
-    pointer-events: none;
-  }
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-buy-now {
@@ -94,7 +85,6 @@ textarea {
   letter-spacing: 0.01em;
   color: $main-color;
   text-align: start;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @media screen and (min-width: 768px) {
     font-size: 13px;
@@ -113,14 +103,9 @@ textarea {
     outline: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    transition: 250ms;
     @media screen and (min-width: 768px) {
       height: 40px;
     }
-  }
-  &__input:hover,
-  &__input:focus {
-    border-color: $accent-color;
   }
 }
 
@@ -132,7 +117,7 @@ textarea {
   margin-top: 20px;
 
   border-radius: 4px;
-  border: solid $main-color 1px;
+  border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: $accent-color;
 
@@ -140,17 +125,16 @@ textarea {
   font-size: 14px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  color: $main-color;
+  color: $white-color;
 
   cursor: pointer;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @media screen and (min-width: 768px) {
     font-size: 16px;
   }
   &:hover,
   &:focus {
-    color: $white-color;
     background-color: $main-color;
   }
 }
