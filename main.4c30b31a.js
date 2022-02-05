@@ -13,4 +13,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"d6sW":[function(require,module,exports) {
 "use strict";var e=l(require("./modules/modals")),t=l(require("./modules/slider")),u=l(require("./modules/scrolling")),r=l(require("./modules/burger")),d=l(require("./modules/drop")),o=l(require("./modules/slideText"));function l(e){return e&&e.__esModule?e:{default:e}}window.addEventListener("DOMContentLoaded",()=>{(0,e.default)(),(0,t.default)(".customer-review__item",".reviews__wrapper"),(0,u.default)(".pageup"),(0,r.default)(".button-menu",".menu",".button-cross",".site-nav__item"),(0,d.default)("[data-text-open]"),(0,o.default)(".hero-text-box__button",".hero-text-box__text")});
 },{"./modules/modals":"RVPr","./modules/slider":"F5eC","./modules/scrolling":"Mr1H","./modules/burger":"jvgS","./modules/drop":"sy4F","./modules/slideText":"Q82P"}]},{},["d6sW"], null)
-//# sourceMappingURL=/IceCream/main.4c30b31a.js.map
+//# sourceMappingURL=/icecream/main.4c30b31a.js.map
